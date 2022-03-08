@@ -7,7 +7,7 @@
 }  
 
 .header {
-  background-color: crimson;
+  background-color: #EC635F;
   width: 100%;
   position:sticky;
   top: 0;
@@ -22,6 +22,7 @@ html {
 }  
 .content {
   flex: 1;
+  padding: 1rem;
 }  
 
 .menu, .logo, .addarticle, .profileicon {
@@ -63,3 +64,68 @@ html {
   padding: 0.5rem;
 }
 
+.card {
+  margin: 2rem 2rem 2rem 0;
+  padding: 1.5rem;
+  width: 200px;
+  box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
+  transition: transform .3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card_title {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.card_topic {
+  background-color: #869398;
+  padding: 0.3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.card_author, .card_votes {
+  font-size: x-small;
+  display: inline-block;
+}
+
+.card_author {
+  padding-right: 2.2rem;
+  position: relative;
+}
+
+.cardcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.newnews {
+  display: flex;
+}
+
+.card_topic, .article-football {
+  background-color: #fac92c;
+  padding: 0.3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.card_topic, .article-cooking {
+  background-color: #2178ae;
+  padding: 0.3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.card_topic, .article-coding {
+  background-color:#f7b0be;
+  padding: 0.3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
