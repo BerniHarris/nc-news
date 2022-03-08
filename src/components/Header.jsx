@@ -5,7 +5,6 @@ import menuicon from '../pics/menuicon.png';
 import logo from '../pics/logo.png';
 import profileicon from '../pics/profileicon.png';
 
-
 export default function Header() {
     return <header className="header">
         {/*  ---- left side ---- */}
@@ -28,10 +27,3 @@ export default function Header() {
         </div>
         </header>
 }
-
-// --------things to fix---------
-// why are icons blurred?
-// pen icon makes it look misaligned even though same height - swap 
-// get a proper imagelogo
-// look into responsive if i have time 
-// swapp dots to burger icon
