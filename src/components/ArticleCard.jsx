@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function ArticleCard(article) { //article is props
-    console.log(article)
     return (
         <div className="card"> 
         <Link to={`/articles/${article.article_id}`} className="article-card" >
