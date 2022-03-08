@@ -4,11 +4,16 @@ import ArticleCard from "./ArticleCard"
 
 export default function ArticleList() {
     const [allArticles, setAllArticles] = useState([])
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         api.getAllArticles().then((res) => {
-            setAllArticles(res)
+            setAllArticles(res);
+            setLoading(false);
         });
     }, []);
+
+    if (loading) return <div>Loading...</div>;
     
     return (
         <div>
@@ -16,7 +21,7 @@ export default function ArticleList() {
             <div className="cardcontainer">
                 {allArticles.map((article) => {
                     return (
-                    <ArticleCard 
+                        <ArticleCard 
                         key={article.article_id}
                         body={article.body}      
                         title={article.title}
