@@ -5,7 +5,6 @@ const api = axios.create({
  })
 
 exports.getAllArticles = (topic) => {
-  // console.log(topic)
   if (!topic) {
     return api.get("/api/articles").then((res) => {
       return res.data.articles;
@@ -13,7 +12,6 @@ exports.getAllArticles = (topic) => {
   }
   else {
       return api.get(`/api/articles?topic=${topic}`).then((res) => {
-        // console.log(res.data.articles)
         return res.data.articles;
       });
   }
@@ -21,8 +19,7 @@ exports.getAllArticles = (topic) => {
 
 exports.getArticle = (article_id) => {
   return api.get(`/api/articles/${article_id}`).then((res) => {
-    console.log(res.data.articles)
-    return res.data.articles;
+    return res.data.article;
   });
 };
 

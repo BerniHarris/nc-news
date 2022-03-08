@@ -26,7 +26,7 @@ export default function ArticleList() {
                 {allArticles.map((article) => {
                     return (
                         <section key={article.article_id}>
-
+                            
                             <Link to={`/topic/${article.topic}`}>
                             <p>{article.topic}</p>
                             </Link>
@@ -39,6 +39,7 @@ export default function ArticleList() {
                             created_at={article.created_at}
                             votes={article.votes}
                             comment_count={article.comment_count}
+                            article_id={article.article_id}
                             /> 
                         </section>
                         );
