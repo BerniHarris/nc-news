@@ -1,13 +1,17 @@
 import {useEffect, useState} from "react"
+import { useParams, Link } from "react-router-dom"
 import * as api from '../utils/api'
 import ArticleCard from "./ArticleCard"
 
 export default function ArticleList() {
+
+    const {topic} = useParams()
+
     const [allArticles, setAllArticles] = useState([])
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        api.getAllArticles().then((res) => {
+        api.getAllArticles(topic).then((res) => {
             setAllArticles(res);
             setLoading(false);
         });
@@ -21,16 +25,22 @@ export default function ArticleList() {
             <div className="cardcontainer">
                 {allArticles.map((article) => {
                     return (
-                        <ArticleCard 
-                        key={article.article_id}
-                        body={article.body}      
-                        title={article.title}
-                        topic={article.topic}
-                        author={article.author}
-                        created_at={article.created_at}
-                        votes={article.votes}
-                        comment_count={article.comment_count}
-                        /> 
+                        <section key={article.article_id}>
+
+                            <Link to={`/topic/${article.topic}`}>
+                            <p>{article.topic}</p>
+                            </Link>
+
+                            <ArticleCard 
+                            body={article.body}      
+                            title={article.title}
+                            topic={article.topic}
+                            author={article.author}
+                            created_at={article.created_at}
+                            votes={article.votes}
+                            comment_count={article.comment_count}
+                            /> 
+                        </section>
                         );
                     })}
                     </div>
