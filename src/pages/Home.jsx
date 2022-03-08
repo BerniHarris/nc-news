@@ -1,9 +1,13 @@
+import pigeon from "../pics/pigeon.png"
+import Articles from "../components/ArticleList"
+
 export default function Home() {
-    return <ul>
-        <li>newest article in own box with a pic</li>
-        <li>article</li>
-        <li>article</li>
-        <li>article</li>
-        <p>a list of all the articles in cards</p>
-    </ul>
+    return (
+        <div className="homecontainer">
+            {/* <div className="newnews"> 
+                <img src={pigeon} className="pigeon" alt="pigeons flying -implying they're off to deliver news"/>
+            </div> */}
+        <Articles />
+        </div>
+    )
 }
