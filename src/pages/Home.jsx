@@ -1,9 +1,9 @@
-import Articles from "../components/ArticleList"
+import ArticleList from "../components/ArticleList"
 
 export default function Home() {
     return (
         <div className="homecontainer">
-        <Articles />
+        <ArticleList />
         </div>
     )
 }
