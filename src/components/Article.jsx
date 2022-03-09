@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom'
-import { getArticle } from "../utils/api";
+import { getArticle, patchVotes } from "../utils/api";
+import Votes from './Votes';
 
 export default function Article() {
     const { article_id } = useParams();
@@ -19,8 +20,8 @@ export default function Article() {
                 <h2 className="article-title">{article.title}</h2>
                 <p className="article-body">{article.body}</p>
                 <p className="article-card_author">Created by {article.author}</p>
-                <p className="article-votes">Votes {article.votes}</p>
-            <Link to={`/topic/${article.topic}`}>
+                <Votes id={article_id} votes={article.votes} />
+                <Link to={`/topic/${article.topic}`}>
                 <p className="article-topic" className={`article-${article.topic}`}>{article.topic}</p>
             </Link>
             </main>
