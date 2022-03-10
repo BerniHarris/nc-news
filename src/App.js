@@ -18,11 +18,11 @@ function App() {
     return (
       <BrowserRouter>
     <div className="App">
-
+  {/*-----------------------Top of page----------------------- */}
     <Header />
+    {/* <Banner /> --- dynamic pictre depending on route - figure out how to do! */}
   {/*-----------------------routes----------------------- */}
       <div className="content">
-   
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
@@ -32,6 +32,7 @@ function App() {
           <Route path='/articles/:article_id' element={<Article />}/>
       </Routes>    
       </div>
+  {/*-----------------------Bottom of page----------------------- */}
 
     <Footer />
     </div>

@@ -9,7 +9,7 @@ export default function ArticleList() {
 
     const [allArticles, setAllArticles] = useState([])
     const [loading, setLoading] = useState(true);
-
+    
     useEffect(() => {
         api.getAllArticles(topic).then((res) => {
             setAllArticles(res);
@@ -26,11 +26,6 @@ export default function ArticleList() {
                 {allArticles.map((article) => {
                     return (
                         <section key={article.article_id}>
-                            
-                            <Link to={`/topic/${article.topic}`}>
-                            <p>{article.topic}</p>
-                            </Link>
-
                             <ArticleCard 
                             body={article.body}      
                             title={article.title}
