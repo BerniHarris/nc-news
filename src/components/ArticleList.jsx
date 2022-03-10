@@ -9,7 +9,7 @@ export default function ArticleList() {
 
     const [allArticles, setAllArticles] = useState([])
     const [loading, setLoading] = useState(true);
-
+    
     useEffect(() => {
         api.getAllArticles(topic).then((res) => {
             setAllArticles(res);

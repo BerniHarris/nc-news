@@ -25,10 +25,9 @@ exports.getArticle = (article_id) => {
   });
 };
 //  ------ votes ------
-exports.patchVotes = (article_id, inc_votes) => {
-  return api.patch(`/api/articles/${article_id}`, inc_votes).then((res) => {
-    console.log(res.data.articles)
-    return res.data.articles;
+exports.patchVotes = (article_id, votes) => {
+  return api.patch(`/api/articles/${article_id}`, {inc_votes: votes}).then((res) => {
+    return res;
   })
 }
 
