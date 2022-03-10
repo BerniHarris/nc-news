@@ -1,28 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {patchVotes} from '../utils/api'
 
-export default function Voting (props) {
-    const [votes, setVotes] = useState(props.votes);
+export default function Voting ({votes, article_id}) {
+    const [votechange, setVotechange] = useState(0);
 
-    useEffect(() => {
-        patchVotes().then((voteCount) => {
-        setVotes(voteCount);
-        });
-    }, []);
-        
-    const handleUpVote = () => {
-        setVotes((currCount) => currCount + 1);
-    };
-          
-    const handleDownVote = () => {
-        setVotes((currCount) => currCount - 1);
-    };
-          
+    const handleIncrement = (inc_votes) => {
+      setVotechange((currCount) => {
+        return currCount + inc_votes;
+    });
+    patchVotes(article_id, inc_votes).catch(() => {
+      setVotechange((currCount) => {
+        return currCount - inc_votes;
+    });
+  })
+};    
+console.log(setVotechange)
         return (
           <div className="voting">
-            <p>Votes {votes}</p>
-            <button onClick={handleDownVote}>-</button>
-            <button onClick={handleUpVote}>+</button>
+            <button disabled ={votechange > 0} onClick={() => handleIncrement(1)}>+</button>
+            <p>Votes {votes + votechange}</p>
+            <button disabled ={votechange < 0} onClick={() => handleIncrement(-1)}>-</button>
           </div>
         );
       };
