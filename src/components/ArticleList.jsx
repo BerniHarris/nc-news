@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react"
-import { useParams, Link } from "react-router-dom"
+import { useParams} from "react-router-dom"
 import * as api from '../utils/api'
 import ArticleCard from "./ArticleCard"
 

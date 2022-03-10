@@ -14,7 +14,6 @@ export default function Voting ({votes, article_id}) {
     });
   })
 };    
-console.log(setVotechange)
         return (
           <div className="voting">
             <button disabled ={votechange > 0} onClick={() => handleIncrement(1)}>+</button>
