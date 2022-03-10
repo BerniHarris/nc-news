@@ -28,6 +28,11 @@ exports.getArticle = (article_id) => {
 exports.patchVotes = (article_id, votes) => {
   return api.patch(`/api/articles/${article_id}`, {inc_votes: votes}).then((res) => {
     return res;
-  })
+  });
 }
-
+// ------ article comments ------
+exports.getCommentsByArticle = (article_id) => {
+  return api.get(`/api/articles/${article_id}/comments`).then((res) => {
+    return res.data.comments;
+  });
+}
