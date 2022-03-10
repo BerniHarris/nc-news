@@ -5,7 +5,7 @@ export default function ArticleCard(article) { //article is props
     return (
         <div className="card"> 
         <Link to={`/topic/${article.topic}`}>
-            <p className="card_topic" className={`article-${article.topic}`}>{article.topic}</p>
+            <p className={`article-${article.topic}`}>{article.topic}</p>
         </Link>
         <Link to={`/articles/${article.article_id}`} className="article-card" >
             <p className="card_title">{article.title}</p>
