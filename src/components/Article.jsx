@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom'
 import { getArticle, getCommentsByArticle } from "../utils/api";
 import Votes from './Votes';
-import ArticleComments from './ArticleComments';
+import PostComment from './PostComment';
+import CommentCard from './CommentCard';
 
 export default function Article() {
     const { article_id } = useParams();
@@ -27,28 +28,26 @@ export default function Article() {
     return (
         <div>
         <div className="article-box">
-            <main className="article">
+            <section className="article">
                 <h2 className="article-title">{article.title}</h2>
                 <p className="article-body">{article.body}</p>
                 <p className="article-card_author">Created by {article.author}</p>
-                <Votes article_id={article_id} votes={article.votes} />
+                <Votes className="vote" article_id={article_id} votes={article.votes} />
             <Link to={`/topic/${article.topic}`}>
                 <p className={`article-${article.topic}`}>{article.topic}</p>
             </Link>
-            </main>
+            </section>
         </div>
-                        {/* -----comments------ */}
+        <PostComment setComments={setComments} article_id={article_id}/>
+            {/* -----comments------ */}
 
-            <h3>Comments:</h3>
-                <p>{comments.map((comment) => {
-                    return (
-                    <ArticleComments key={comment.comment_id} {...comment} 
-                        comments={comments} 
-                        setComments={setComments} 
-                        article_id={article_id}/>
+        <h3>Comments:</h3>
+            <div>{comments.map((comment) => {
+                return (
+                <CommentCard key={comment.comment_id} {...comment} />
                     )
-                    })}
-                </p>
+                })}
+            </div>
         </div>
     );
 };
