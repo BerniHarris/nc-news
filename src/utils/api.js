@@ -36,3 +36,9 @@ exports.getCommentsByArticle = (article_id) => {
     return res.data.comments;
   });
 }
+// ------ post comments ------
+exports.postArticleComment = (article_id, comment) => {
+  return api.post(`/api/articles/${article_id}/comments`, comment).then((res) => {
+    return res.data.comment;
+  });
+}
