@@ -11,7 +11,6 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Menu from './pages/Menu';
 import Article from './components/Article'
-import CommentCard from './components/ArticleComments';
 
 
   {/*-----------------------Page----------------------- */}
