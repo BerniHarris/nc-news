@@ -1,45 +1,60 @@
-import {useEffect, useState} from "react"
-import { useParams} from "react-router-dom"
-import * as api from '../utils/api'
-import ArticleCard from "./ArticleCard"
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import * as api from "../utils/api";
+import ArticleCard from "./ArticleCard";
+import { SortBy } from "./SortBy";
 
 export default function ArticleList() {
+  const { topic } = useParams();
 
-    const {topic} = useParams()
+  const [allArticles, setAllArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [sort, setSort] = useState("created_at");
+  const [order, setOrder] = useState();
 
-    const [allArticles, setAllArticles] = useState([])
-    const [loading, setLoading] = useState(true);
-    
-    useEffect(() => {
-        api.getAllArticles(topic).then((res) => {
-            setAllArticles(res);
-            setLoading(false);
-        });
-    }, []);
+  useEffect(() => {
+    api.getAllArticles(topic, sort, order).then((res) => {
+      setAllArticles(res);
+      setLoading(false);
+    });
+  }, [topic, sort, order]);
 
-    if (loading) return <div>Loading...</div>;
-    
-    return (
-        <div>
-            <h1>Articles</h1>
-            <div className="cardcontainer">
-                {allArticles.map((article) => {
-                    return (
-                        <section key={article.article_id}>
-                            <ArticleCard 
-                            body={article.body}      
-                            title={article.title}
-                            topic={article.topic}
-                            author={article.author}
-                            created_at={article.created_at}
-                            votes={article.votes}
-                            comment_count={article.comment_count}
-                            article_id={article.article_id}
-                            /> 
-                        </section>
-                        );
-                    })}
-                    </div>
-            </div>
-    );
-};
+  if (loading) return <div>Loading...</div>;
+
+  return (
+    <div>
+      <h1>Articles</h1>
+      <SortBy setSort={setSort} setOrder={setOrder} />
+      <div className="cardcontainer">
+        {allArticles.map(
+          ({
+            article_id,
+            title,
+            body,
+            topic,
+            comment_count,
+            author,
+            created_at,
+            votes,
+          }) => {
+            console.log(topic.description);
+            return (
+              <section key={article_id}>
+                <ArticleCard
+                  body={body}
+                  title={title}
+                  topic={topic}
+                  author={author}
+                  created_at={created_at}
+                  votes={votes}
+                  comment_count={comment_count}
+                  article_id={article_id}
+                />
+              </section>
+            );
+          }
+        )}
+      </div>
+    </div>
+  );
+}
