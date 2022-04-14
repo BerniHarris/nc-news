@@ -4,29 +4,32 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}  
+}
 
 .header {
-  background-color: #D12424;
+  background-color: #d12424;
   width: 100%;
-  position:sticky;
+  position: sticky;
   top: 0;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   box-shadow: 0px 2px 2px #869398;
   z-index: 1;
-}  
+}
 
 html {
   height: 100%;
   width: 100%;
-}  
+}
 .content {
   flex: 1;
   padding: 1rem;
-}  
+}
 
-.menu, .logo, .addarticle, .profileicon {
+.menu,
+.logo,
+.addarticle,
+.profileicon {
   height: 1.5rem;
   padding: 0.6rem;
 }
@@ -48,9 +51,9 @@ html {
   background-color: #515151;
   color: white;
   padding-top: 1.5em;
-  padding-bottom: 2.5em; 
+  padding-bottom: 2.5em;
   flex-shrink: 0;
-}  
+}
 
 .pagefooter {
   background-color: #515151;
@@ -59,8 +62,8 @@ html {
   padding: 1rem;
 }
 
-.githublogo{
-  height: 1rem;
+.githublogo {
+  height: 1.3rem;
   background-color: #515151;
   padding: 0.5rem;
 }
@@ -68,10 +71,10 @@ html {
 .card {
   margin: 1.5rem 1.5rem 1.5rem 0;
   padding: 1.5rem;
-  width: 200px;
+  width: 250px;
   height: 200px;
   box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
@@ -91,7 +94,8 @@ html {
   margin-right: 3rem;
 }
 
-.card_author, .card_votes {
+.card_author,
+.card_votes {
   font-size: x-small;
   display: inline-block;
 }
@@ -113,22 +117,25 @@ html {
   display: flex;
 }
 
-.card_topic, .article-football {
+.card_topic,
+.article-football {
   background-color: #fac92c;
   padding: 0.3rem;
   margin-left: 3rem;
   margin-right: 3rem;
 }
 
-.card_topic, .article-cooking {
+.card_topic,
+.article-cooking {
   background-color: #2178ae;
   padding: 0.3rem;
   margin-left: 3rem;
   margin-right: 3rem;
 }
 
-.card_topic, .article-coding {
-  background-color:#f7b0be;
+.card_topic,
+.article-coding {
+  background-color: #f7b0be;
   padding: 0.3rem;
   margin-left: 3rem;
   margin-right: 3rem;
@@ -145,8 +152,20 @@ html {
   padding: 1.5rem;
   box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
 }
- .voting{
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between
- }
+.voting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.create_votes span {
+  align-self: flex-end;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #000000;
+  text-decoration: none;
+}
