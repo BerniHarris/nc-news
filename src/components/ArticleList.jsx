@@ -24,8 +24,8 @@ export default function ArticleList() {
 
   return (
     <div>
-      {/* <img src={pidge} height={150} /> */}
-      <h1>All Scrolls</h1>
+      <img src={pidge} height={150} />
+      <h1>{topic} Scrolls</h1>
       <SortBy setSort={setSort} setOrder={setOrder} />
       <div className="cardcontainer">
         {allArticles.map(
@@ -39,7 +39,6 @@ export default function ArticleList() {
             created_at,
             votes,
           }) => {
-            console.log(topic.description);
             return (
               <section key={article_id}>
                 <ArticleCard
