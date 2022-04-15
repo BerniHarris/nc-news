@@ -69,6 +69,7 @@ html {
 }
 
 .card {
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
   margin: 1.5rem 1.5rem 1.5rem 0;
   padding: 1.5rem;
   width: 250px;
@@ -80,6 +81,7 @@ html {
 
 .card:hover {
   transform: scale(1.1);
+  --box-shadow-color: #f7b0be;
 }
 
 .card_title {
@@ -147,10 +149,15 @@ html {
   box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
 }
 
-.article-box {
+/* .article-box {
   margin: 0.5rem 0.5rem 0.5rem 0.5rem;
   padding: 1.5rem;
   box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
+} */
+.voting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .voting {
   display: flex;

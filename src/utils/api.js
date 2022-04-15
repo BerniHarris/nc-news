@@ -4,18 +4,34 @@ const api = axios.create({
   baseURL: "https://berni-nc-news.herokuapp.com",
 });
 
-//  ------ list of all articles ------
-exports.getAllArticles = (topic) => {
-  if (!topic) {
-    return api.get("/api/articles").then((res) => {
+exports.getTopics = (topic, sort, order) => {
+  return api
+    .get(`/api/articles?topic=${topic}`, {
+      params: { sort_by: sort, order: order },
+    })
+    .then((res) => {
       return res.data.articles;
     });
+};
+//  ------ list of all articles ------
+exports.getAllArticles = (topic, sort, order) => {
+  if (!topic) {
+    return api
+      .get("/api/articles", { params: { sort_by: sort, order: order } })
+      .then((res) => {
+        return res.data.articles;
+      });
   }
+
   //  ------ list of all articles by topic------
   else {
-    return api.get(`/api/articles?topic=${topic}`).then((res) => {
-      return res.data.articles;
-    });
+    return api
+      .get(`/api/articles?topic=${topic}`, {
+        params: { sort_by: sort, order: order },
+      })
+      .then((res) => {
+        return res.data.articles;
+      });
   }
 };
 //  ------ article by id------
@@ -33,10 +49,14 @@ exports.patchVotes = (article_id, votes) => {
     });
 };
 // ------ article comments ------
-exports.getCommentsByArticle = (article_id) => {
-  return api.get(`/api/articles/${article_id}/comments`).then((res) => {
-    return res.data.comments;
-  });
+exports.getCommentsByArticle = (article_id, sort, order) => {
+  return api
+    .get(`/api/articles/${article_id}/comments`, {
+      params: { sort_by: sort, order: order },
+    })
+    .then((res) => {
+      return res.data.comments;
+    });
 };
 // ------ post comments ------
 exports.postArticleComment = (article_id, comment) => {

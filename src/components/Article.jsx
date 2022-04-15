@@ -39,6 +39,9 @@ export default function Article() {
           />
           <Link to={`/topic/${article.topic}`}>
             <p className={`article-${article.topic}`}>{article.topic}</p>
+            <p className={`article-${article.comment_count}`}>
+              {article.comment_count}
+            </p>
           </Link>
         </section>
       </div>
