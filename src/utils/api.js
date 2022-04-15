@@ -66,3 +66,7 @@ exports.postArticleComment = (article_id, comment) => {
       return res.data.comment;
     });
 };
+
+exports.deleteArticleComment = (comment_id) => {
+  return api.delete(`/api/comments/${comment_id}`);
+};
