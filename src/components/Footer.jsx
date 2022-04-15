@@ -1,13 +1,17 @@
-import {Link} from 'react-router-dom'
-import github from '../pics/github.png'
+import github from "../pics/github.png";
 
 export default function Footer() {
-    return <footer className='pagefooter'> 
-    <p>A project by Berni Harris <br/>
-    <Link to="/Home"> {/*<---- change link to github */}
-            <img src={github} className="githublogo" alt="github cat logo" />
-    </Link><br/>
-    Created as part of my coding bootcamp at<br/>
-    </p>
-    </footer> 
+  return (
+    <footer className="pagefooter">
+      <p>
+        A project by Berni Harris <br />
+        <a target="_blank" href="https://github.com/BerniHarris">
+          <img src={github} className="githublogo" alt="github cat logo" />
+        </a>
+        <br />
+        Created as part of my coding bootcamp at Northcoders.
+        <br />
+      </p>
+    </footer>
+  );
 }

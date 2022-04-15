@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import * as api from "../utils/api";
 import ArticleCard from "./ArticleCard";
 import { SortBy } from "./SortBy";
+import pidge from "../pics/post.png";
 
 export default function ArticleList() {
   const { topic } = useParams();
@@ -23,7 +24,8 @@ export default function ArticleList() {
 
   return (
     <div>
-      <h1>Articles</h1>
+      {/* <img src={pidge} height={150} /> */}
+      <h1>All Scrolls</h1>
       <SortBy setSort={setSort} setOrder={setOrder} />
       <div className="cardcontainer">
         {allArticles.map(
