@@ -7,7 +7,7 @@
 }
 
 .header {
-  background-color: #d12424;
+  background-color: #26a2a8;
   width: 100%;
   position: sticky;
   top: 0;
@@ -63,22 +63,25 @@ html {
 }
 
 .githublogo {
-  height: 1rem;
+  height: 1.3rem;
   background-color: #515151;
   padding: 0.5rem;
 }
 
 .card {
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
   margin: 1.5rem 1.5rem 1.5rem 0;
   padding: 1.5rem;
-  width: 200px;
-  box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 200px;
+  box-shadow: 0 0 28px 4px var(--box-shadow-color);
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
 .card:hover {
   transform: scale(1.1);
+  --box-shadow-color: #c99c95;
 }
 
 .card_title {
@@ -104,6 +107,8 @@ html {
   position: relative;
 }
 
+/* author and votes inside their own element look into making the card a flex column*/
+
 .cardcontainer {
   display: flex;
   flex-wrap: wrap;
@@ -116,7 +121,7 @@ html {
 
 .card_topic,
 .article-football {
-  background-color: #fac92c;
+  background-color: #fe673a;
   padding: 0.3rem;
   margin-left: 3rem;
   margin-right: 3rem;
@@ -124,7 +129,7 @@ html {
 
 .card_topic,
 .article-cooking {
-  background-color: #2178ae;
+  background-color: #3681ac;
   padding: 0.3rem;
   margin-left: 3rem;
   margin-right: 3rem;
@@ -144,10 +149,43 @@ html {
   box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
 }
 
-.article-box {
+/* .article-box {
   margin: 0.5rem 0.5rem 0.5rem 0.5rem;
   padding: 1.5rem;
   box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
+} */
+.voting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.voting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.create_votes span {
+  align-self: flex-end;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #301934;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Fredbones";
+  src: url("../src/utils/Fredbones.ttf");
+}
+
+h1 {
+  font-family: "Fredbones";
+  font-size: 60px;
+  color: #301934;
 }
 .voting {
   display: flex;
