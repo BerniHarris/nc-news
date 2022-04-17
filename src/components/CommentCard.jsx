@@ -14,11 +14,17 @@ export default function CommentCard(comment) {
   return (
     <div>
       <dl className="individual-comment-box">
-        <dt>{comment.body}</dt>
-        <dt>Author {comment.author}</dt>
-        <dt>Votes {comment.votes}</dt>
-        <dt>At {moment(created).format("MMM Do YYYY")}</dt>
-        <button onClick={handleClick}>Delete Comment</button>
+        <div className="timeandby2">
+          <dt className="card_author">By {comment.author}</dt>
+          <dt className="article_time">
+            {moment(created).format("MMM Do YYYY")}
+          </dt>
+        </div>
+        <dt className="comment_body">{comment.body}</dt>
+        <div className="likeanddelete">
+          <dt>Likes {comment.votes}</dt>
+          <button onClick={handleClick}>Delete Comment</button>
+        </div>
       </dl>
     </div>
   );

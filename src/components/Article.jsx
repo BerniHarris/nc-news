@@ -57,8 +57,8 @@ export default function Article() {
             />
           </div>
         </section>
+        <PostComment setComments={setComments} article_id={article_id} />
       </div>
-      <PostComment setComments={setComments} article_id={article_id} />
       {/* -----comments------ */}
 
       <h3>Comments:</h3>

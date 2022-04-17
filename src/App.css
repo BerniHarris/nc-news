@@ -276,3 +276,30 @@ h1 {
   font-size: large;
   font-weight: 700;
 }
+.individual-comment-box {
+  padding: 3rem;
+  padding-left: 3.5rem;
+  text-align: left;
+  margin-left: 3rem;
+}
+.comment_body {
+  padding-bottom: 2rem;
+}
+
+.article {
+  margin-bottom: 1.5rem;
+}
+
+.likeanddelete {
+  flex-direction: column;
+  text-align: right;
+  padding-top: 0.5rem;
+}
+
+.timeandby2 {
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
