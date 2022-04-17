@@ -21,10 +21,6 @@ html {
   height: 100%;
   width: 100%;
 }
-.content {
-  flex: 1;
-  padding: 1rem;
-}
 
 .menu,
 .logo,
@@ -60,6 +56,7 @@ html {
   color: black;
   font-size: small;
   padding: 1rem;
+  margin-top: 2rem;
 }
 
 .githublogo {
@@ -68,43 +65,56 @@ html {
   padding: 0.5rem;
 }
 
-.card {
+.coding-card,
+.football-card,
+.cooking-card {
   --box-shadow-color: rgba(0, 0, 0, 0.1);
-  margin: 1.5rem 1.5rem 1.5rem 0;
+  margin: 1.5rem 1.5rem 1.5rem 1.5rem;
   padding: 1.5rem;
   width: 500px;
   height: 200px;
-  box-shadow: 0 0 28px 4px var(--box-shadow-color);
+  box-shadow: 0 0 25px 5px var(--box-shadow-color);
   transition: transform 0.3s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.card:hover {
+.football-card:hover {
   transform: scale(1.1);
-  --box-shadow-color: #c99c95;
+  --box-shadow-color: #e1bfae;
 }
 
+.cooking-card:hover {
+  transform: scale(1.1);
+  --box-shadow-color: #bed3d4;
+}
+.coding-card:hover {
+  transform: scale(1.1);
+  --box-shadow-color: #e2d1d4;
+}
 .card_title {
   font-weight: 800;
-  font-size: 1rem;
-}
-
-.card_topic {
-  background-color: #869398;
-  padding: 0.3rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
-}
-
-.card_author,
-.card_votes {
-  font-size: x-small;
-  display: inline-block;
+  font-size: large;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .card_author {
-  padding-right: 2.2rem;
-  position: relative;
+  font-weight: 700;
+  color: #515151;
+}
+
+.bylikecomment {
+  font-size: small;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 /* author and votes inside their own element look into making the card a flex column*/
@@ -123,24 +133,24 @@ html {
 .article-football {
   background-color: #fe673a;
   padding: 0.3rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 9rem;
+  margin-right: 9rem;
 }
 
 .card_topic,
 .article-cooking {
-  background-color: #3681ac;
+  background-color: #3e91c1;
   padding: 0.3rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 9rem;
+  margin-right: 9rem;
 }
 
 .card_topic,
 .article-coding {
   background-color: #f7b0be;
   padding: 0.3rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 9rem;
+  margin-right: 9rem;
 }
 
 .individual-comment-box {
@@ -181,7 +191,10 @@ a:active {
   font-family: "Fredbones";
   src: url("../src/utils/Fredbones.ttf");
 }
-
+@font-face {
+  font-family: "BlackBones";
+  src: url("../src/utils/BlackBones.ttf");
+}
 h1 {
   font-family: "Fredbones";
   font-size: 60px;
@@ -190,5 +203,9 @@ h1 {
 .voting {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.authorvotecomment {
   justify-content: space-between;
 }
