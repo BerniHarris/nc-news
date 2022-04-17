@@ -109,6 +109,12 @@ html {
   color: #515151;
 }
 
+.card_topic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .bylikecomment {
   font-size: small;
   justify-content: space-evenly;
@@ -132,28 +138,22 @@ html {
   display: flex;
 }
 
-.card_topic,
 .article-football {
   background-color: #fe673a;
   padding: 0.3rem;
-  margin-left: 9rem;
-  margin-right: 9rem;
+  width: 12rem;
 }
 
-.card_topic,
 .article-cooking {
   background-color: #3e91c1;
   padding: 0.3rem;
-  margin-left: 9rem;
-  margin-right: 9rem;
+  width: 12rem;
 }
 
-.card_topic,
 .article-coding {
   background-color: #f7b0be;
   padding: 0.3rem;
-  margin-left: 9rem;
-  margin-right: 9rem;
+  width: 12rem;
 }
 
 .individual-comment-box {
@@ -162,16 +162,12 @@ html {
   box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* .article-box {
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-  padding: 1.5rem;
+.article-box {
+  margin: 0.5rem 0.5rem 2.5rem 0.5rem;
+  padding: 2rem;
   box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
-} */
-.voting {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
+
 .voting {
   display: flex;
   flex-direction: column;
@@ -204,11 +200,34 @@ h1 {
   color: #301934;
 }
 .voting {
+  font-size: small;
+  justify-content: space-evenly;
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.authorvotecomment {
+.articlebylikecomment {
+  font-size: small;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  justify-content: flex-end;
+}
+
+.timeandby {
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: rem;
+}
+.article_time {
+  margin-left: 1.5rem;
+}
+.article-body {
+  margin-bottom: 2.5em;
 }
