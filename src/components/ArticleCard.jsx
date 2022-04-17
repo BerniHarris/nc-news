@@ -6,11 +6,13 @@ export default function ArticleCard(article) {
   return (
     <div className={`${article.topic}-card`}>
       <div>
-        <Link to={`/topic/${article.topic}`}>
-          <p className={`article-${article.topic}`}>
-            {article.topic.toUpperCase()}
-          </p>
-        </Link>
+        <div className="card_topic">
+          <Link to={`/topic/${article.topic}`}>
+            <p className={`article-${article.topic}`}>
+              {article.topic.toUpperCase()}
+            </p>
+          </Link>
+        </div>
         <Link to={`/articles/${article.article_id}`} className="article-card">
           <p className="card_title">{article.title.toUpperCase()}</p>
         </Link>
