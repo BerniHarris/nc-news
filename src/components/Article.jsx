@@ -33,9 +33,11 @@ export default function Article() {
       <div className="article-box">
         <section className="article">
           <div className="card_topic">
-            <p className={`article-${article.topic}`}>
-              {article.topic.toUpperCase()}
-            </p>
+            <Link to={`/topic/${article.topic}`}>
+              <p className={`article-${article.topic}`}>
+                {article.topic.toUpperCase()}
+              </p>
+            </Link>
           </div>
           <h2 className="card_title">{article.title.toUpperCase()}</h2>
           <div className="timeandby">
@@ -44,7 +46,6 @@ export default function Article() {
               {moment(created).format("MMM Do YYYY")}
             </p>
           </div>
-          <Link to={`/topic/${article.topic}`}></Link>
           <p className="article-body">{article.body}</p>
           <div className="articlebylikecomment">
             <p className={`article-${article.comment_count}`}>

@@ -283,7 +283,7 @@ h1 {
   margin-left: 3rem;
 }
 .comment_body {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .article {
@@ -302,4 +302,14 @@ h1 {
   flex-direction: row;
   justify-content: flex-start;
   margin-bottom: 1rem;
+}
+
+.bin {
+  height: 1.5rem;
+  margin: 0.2rem;
+  fill: #869398;
+}
+
+.bin:hover {
+  fill: #26a2a8;
 }
