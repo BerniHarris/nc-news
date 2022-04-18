@@ -17,7 +17,9 @@ exports.getTopics = (topic, sort, order) => {
 exports.getAllArticles = (topic, sort, order) => {
   if (!topic) {
     return api
-      .get("/api/articles", { params: { sort_by: sort, order: order } })
+      .get("/api/articles", {
+        params: { topic: topic, sort_by: sort, order: order },
+      })
       .then((res) => {
         return res.data.articles;
       });
@@ -49,14 +51,10 @@ exports.patchVotes = (article_id, votes) => {
     });
 };
 // ------ article comments ------
-exports.getCommentsByArticle = (article_id, sort, order) => {
-  return api
-    .get(`/api/articles/${article_id}/comments`, {
-      params: { sort_by: sort, order: order },
-    })
-    .then((res) => {
-      return res.data.comments;
-    });
+exports.getCommentsByArticle = (article_id) => {
+  return api.get(`/api/articles/${article_id}/comments`, {}).then((res) => {
+    return res.data.comments;
+  });
 };
 // ------ post comments ------
 exports.postArticleComment = (article_id, comment) => {
