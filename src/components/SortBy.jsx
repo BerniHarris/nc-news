@@ -21,6 +21,8 @@ export const SortBy = ({ setSort, setOrder }) => {
           <option value="created_at desc">Newest</option>
           <option value="votes asc">Least Votes</option>
           <option value="votes desc">Most Votes</option>
+          <option value="comment_count asc">Least comments</option>
+          <option value="comment_count desc">Most comments</option>
           {/* //add comment sort */}
         </select>
       </label>
