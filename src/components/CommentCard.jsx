@@ -5,11 +5,13 @@ import { deleteArticleComment, getCommentsByArticle } from "../utils/api";
 export default function CommentCard(comment) {
   const handleClick = () => {
     deleteArticleComment(comment.comment_id).then(() => {
-      getCommentsByArticle(comment.article_id).then((receivedData) => {
-        return comment.setComments(receivedData);
+      alert("Comment deleted!");
+      getCommentsByArticle(comment.article_id).then((comments) => {
+        comment.setComments(comments);
       });
     });
   };
+
   let created = comment.created_at;
   return (
     <div>

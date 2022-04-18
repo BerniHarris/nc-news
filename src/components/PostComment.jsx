@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { postArticleComment } from "../utils/api";
-import Form from "../Form.css";
 
 export default function PostComment({ setComments, article_id }) {
   const [comment, setComment] = useState("");
@@ -21,7 +20,7 @@ export default function PostComment({ setComments, article_id }) {
     postArticleComment(article_id, newComment)
       .catch((err) => {
         setErr(true);
-        // alert("Somthing went wrong! Please try again");
+        alert("Somthing went wrong! Please try again");
         setComments((currComments) => {
           return currComments.slice(1);
         });
