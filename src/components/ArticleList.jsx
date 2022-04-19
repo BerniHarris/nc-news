@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import * as api from "../utils/api";
 import ArticleCard from "./ArticleCard";
 import { SortBy } from "./SortBy";
-import pidge from "../pics/post.png";
+// import pidge from "../pics/post.png";
 
 export default function ArticleList() {
   const { topic } = useParams();
