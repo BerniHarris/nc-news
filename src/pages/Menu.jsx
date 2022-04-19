@@ -1,3 +1,4 @@
+/* eslint-disable no-empty-pattern */
 import { Link } from "react-router-dom";
 
 export default function Menu({}) {
