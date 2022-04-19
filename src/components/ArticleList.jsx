@@ -24,8 +24,8 @@ export default function ArticleList() {
 
   return (
     <div>
-      <img src={pidge} height={150} />
-      <h1>{topic} Scrolls</h1>
+      {/* <img src={pidge} height={150} /> */}
+      <h1>{topic} Articles</h1>
       <SortBy setSort={setSort} setOrder={setOrder} />
       <div className="cardcontainer">
         {allArticles.map(
