@@ -11,25 +11,31 @@ export default function PostComment({ setComments, article_id }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     const newComment = {
       username: "happyamy2016",
       body: comment,
     };
-    setErr(false);
-    setComment("");
-    postArticleComment(article_id, newComment)
-      .catch((err) => {
-        setErr(true);
-        alert("Somthing went wrong! Please try again");
-        setComments((currComments) => {
-          return currComments.slice(1);
+
+    if (newComment.body.length === 0) {
+      alert("Don't forget to include a comment!");
+    } else {
+      setErr(false);
+      setComment("");
+      postArticleComment(article_id, newComment)
+        .catch((err) => {
+          setErr(true);
+          alert("Somthing went wrong! Please try again");
+          setComments((currComments) => {
+            return currComments.slice(1);
+          });
+        })
+        .then((newResponseComment) => {
+          setComments((currComments) => {
+            return [newResponseComment, ...currComments];
+          });
         });
-      })
-      .then((newResponseComment) => {
-        setComments((currComments) => {
-          return [newResponseComment, ...currComments];
-        });
-      });
+    }
   };
   return (
     <div className="form-box">
