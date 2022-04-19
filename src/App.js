@@ -6,11 +6,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ArticleList from "./components/ArticleList";
+import Article from "./components/Article";
 //imported pages
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Menu from "./pages/Menu";
-import Article from "./components/Article";
+import NotFound from "./pages/NotFound.jsx";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/topic/:topic" element={<ArticleList />} />
             <Route path="/articles" element={<Home />} />
             <Route path="/articles/:article_id" element={<Article />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
         {/*-----------------------Bottom of page----------------------- */}
