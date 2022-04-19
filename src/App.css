@@ -233,25 +233,27 @@ h1 {
   margin-bottom: 3em;
   text-align: left;
 }
-
+.form {
+  width: max-content;
+}
 .form-box {
   margin: 1rem;
   padding: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 .form-box textarea {
   margin: 1rem;
-  border: 4;
+  border: 2;
   border-radius: 5px;
   font-size: 16px;
   align-items: center;
   background-color: whitesmoke;
-  box-shadow: inset;
   text-align: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 0.2rem;
+  width: 80%;
+  height: 5rem;
 }
 
 .submit {
