@@ -1,6 +1,6 @@
 NC News
 ---
-Check it out here: (link)
+Check it out [here](https://nc-pigeonpost.netlify.app)
  ## About
 NC news has been created as part of my 13 week coding bootcamp at Northcoders and my first (of many I'm sure!) full stack application. 
 
