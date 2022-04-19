@@ -1,14 +1,11 @@
 import React from "react";
 import moment from "moment";
-import { deleteArticleComment, getCommentsByArticle } from "../utils/api";
+import { deleteArticleComment } from "../utils/api";
 
 export default function CommentCard(comment) {
   const handleClick = () => {
     deleteArticleComment(comment.comment_id).then(() => {
       alert("Comment deleted!");
-      getCommentsByArticle(comment.article_id).then((comments) => {
-        comment.setComments(comments);
-      });
     });
   };
 
