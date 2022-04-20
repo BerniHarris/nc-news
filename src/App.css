@@ -58,7 +58,6 @@ html {
   height: 200px;
   box-shadow: 0 0 25px 5px var(--box-shadow-color);
   transition: transform 0.3s ease;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -82,6 +81,7 @@ html {
   font-size: large;
   margin-left: 1rem;
   margin-right: 1rem;
+  cursor: pointer;
 }
 
 .card_author {
@@ -93,6 +93,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  cursor: pointer;
 }
 
 .bylikecomment {
