@@ -9,7 +9,6 @@ import Article from "./components/Article";
 import Navbar from "./components/Navbar";
 //imported pages
 import Home from "./pages/Home";
-import Login from "./pages/Login";
 import NotFound from "./pages/NotFound.jsx";
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/login" element={<Login />} />
             <Route path="/topic/:topic" element={<ArticleList />} />
             <Route path="/articles" element={<Home />} />
             <Route path="/articles/:article_id" element={<Article />} />
