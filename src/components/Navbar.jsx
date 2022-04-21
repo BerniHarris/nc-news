@@ -58,7 +58,7 @@ function Navbar() {
             })}
           </ul>
         </nav>
-        ;
+
         <nav className={login ? "login-menu active" : "login-menu"}>
           <ul className="login-items" onClick={showLogin}>
             <li className="login-toggle">
