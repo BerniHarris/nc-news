@@ -23,7 +23,7 @@ export default function Landing() {
           </p>
           <p className="landing">the Pigeon Loft</p>
           <p className="landingtext">
-            NC News shares a selection of random articles delivered by the
+            NC News shares an exclusive selection of articles delivered by the
             fascinating pigeons of Dave’s Pigeon Loft.
           </p>
           <Link to="/Home">
