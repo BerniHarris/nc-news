@@ -2,6 +2,7 @@
 import "./App.css";
 // router to create links to pages
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { React } from "react";
 //imported components
 import Footer from "./components/Footer";
 import ArticleList from "./components/ArticleList";
@@ -10,18 +11,35 @@ import Navbar from "./components/Navbar";
 //imported pages
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound.jsx";
+import Landing from "./pages/Landing";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        {/*-----------------------Top of page----------------------- */}
+        <Routes>
+          <Route exact path="/(landing)" element={<Frontpage />} />
+          <Route path="/*" element={<Default />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
+  function Frontpage() {
+    return (
+      <div className="background">
+        <Routes>
+          <Route path="/landing" element={<Landing />} />
+        </Routes>
+      </div>
+    );
+  }
+  function Default() {
+    return (
+      <div className="App">
         <Navbar />
-        {/* <Banner /> --- dynamic pictre depending on route - figure out how to do! */}
-        {/*-----------------------routes----------------------- */}
         <div className="content">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Landing />} />
             <Route path="/home" element={<Home />} />
             <Route path="/topic/:topic" element={<ArticleList />} />
             <Route path="/articles" element={<Home />} />
@@ -29,12 +47,9 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
-        {/*-----------------------Bottom of page----------------------- */}
-
         <Footer />
       </div>
-    </BrowserRouter>
-  );
+    );
+  }
 }
-
 export default App;
