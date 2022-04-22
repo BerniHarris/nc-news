@@ -6,7 +6,7 @@ export default function Landing() {
       className="background"
       style={{
         backgroundimage: "../src/pics/coop.jpg",
-        backgroundposition: "center",
+        backgroundposition: "center - 3rem",
         backgroundsize: "cover",
         backgroundrepeat: "no-repeat",
         width: "100vw",
@@ -15,16 +15,19 @@ export default function Landing() {
     >
       <div className="landing-content">
         <>
-          <p className="landingtext" style={{ fontSize: "1.8vw" }}>
+          <p
+            className="landingtext"
+            style={{ fontSize: "1.5rem", fontStyle: "italic" }}
+          >
             News from
           </p>
           <p className="landing">the Pigeon Loft</p>
           <p className="landingtext">
-            NC News shares a selection of random articles delivered <br />
-            by the fascinating pigeons of Dave’s Pigeon Loft.
+            NC News shares a selection of random articles delivered by the
+            fascinating pigeons of Dave’s Pigeon Loft.
           </p>
           <Link to="/Home">
-            <button className="enter">Let me in!</button>
+            <button className="enter">Sounds coo-l!</button>
           </Link>
         </>
       </div>
