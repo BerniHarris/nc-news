@@ -33,6 +33,7 @@ html {
   padding-top: 1.5em;
   padding-bottom: 2.5em;
   flex-shrink: 0;
+  max-width: 100%;
 }
 
 .pagefooter {
@@ -42,6 +43,7 @@ html {
   padding-top: 1rem;
   padding-bottom: 2rem;
   width: 100vw;
+  max-width: 100%;
 }
 
 .githublogo {
@@ -343,6 +345,7 @@ button {
   width: 100vw;
   height: 100vh;
   background-blend-mode: multiply;
+  max-width: 100%;
 }
 
 .landing {
