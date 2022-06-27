@@ -8,7 +8,7 @@ export default function About() {
             NC news has been created as part of my 13 week coding bootcamp at
             Northcoders and my first full stack application.
             <p>
-              Using the API I made in our backend modlie, NC News has been
+              Using the API I made in our backend module, NC News has been
               created as a simplified reddit style website using my freshly
               learnt front end knowledge.
             </p>
