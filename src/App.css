@@ -181,7 +181,7 @@ a:active {
   src: url("../src/utils/BlackBones.ttf");
 }
 h1 {
-  font-family: "Fredbones";
+  /* font-family: "Fredbones"; */
   font-size: 60px;
   color: #301934;
 }
