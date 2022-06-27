@@ -22,14 +22,11 @@ export default function ArticleList() {
 
   if (loading) return <div>Loading...</div>;
 
-  let topics = `${
-    topic.charAt(0).toUpperCase() + topic.slice(1).toLowerCase()
-  } Articles`;
+  // {topic.charAt(0).toUpperCase() + topic.slice(1).toLowerCase()}
 
   return (
     <div>
-      {/* <img src={pidge} height={150} /> */}
-      <h1>{topics}</h1>
+      <h1>{topic} articles</h1>
       <SortBy setSort={setSort} setOrder={setOrder} />
       <div className="cardcontainer">
         {allArticles.map(
