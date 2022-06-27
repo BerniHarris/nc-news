@@ -5,7 +5,7 @@ import Birdhouse from "./birdhouse";
 export const NavbarData = [
   {
     title: "Home",
-    path: "/",
+    path: "/home",
     icon: <Birdhouse />,
     cName: "nav-text",
   },
@@ -28,9 +28,9 @@ export const NavbarData = [
     cName: "nav-text",
   },
   {
-    title: "All Articles",
-    path: "/articles",
-    icon: <FaIcons.FaNewspaper />,
+    title: "About",
+    path: "/about",
+    icon: <FaIcons.FaInfoCircle />,
     cName: "nav-text",
   },
 ];

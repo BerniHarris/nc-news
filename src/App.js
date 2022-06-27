@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound.jsx";
 import Landing from "./pages/Landing";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
             <Route path="/topic/:topic" element={<ArticleList />} />
             <Route path="/articles" element={<Home />} />
             <Route path="/articles/:article_id" element={<Article />} />
+            <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
