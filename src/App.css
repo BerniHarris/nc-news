@@ -184,6 +184,10 @@ h1 {
   font-size: 60px;
   color: #301934;
 }
+
+h2 {
+  color: #301934;
+}
 .voting {
   font-size: small;
   align-items: center;
@@ -387,4 +391,22 @@ button {
 .enter:hover {
   transform: scale(1.1);
   background: #fa450e;
+}
+
+.about {
+  text-align: left;
+}
+
+.about-box {
+  margin: 4%;
+  padding: 2rem;
+  box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inner-about-box {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+  padding-bottom: 6rem;
 }
