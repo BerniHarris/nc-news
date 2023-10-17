@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { React } from "react";
 //imported components
 import Footer from "./components/Footer";
-import ArticleList from "./components/ArticleList";
+import ArticleList from "./pages/ArticleList";
 import Article from "./components/Article";
 import Navbar from "./components/Navbar";
 //imported pages
