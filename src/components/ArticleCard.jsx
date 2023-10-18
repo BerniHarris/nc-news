@@ -4,7 +4,7 @@ import like from "../pics/like.svg";
 import comment from "../pics/comment.svg";
 import "./ArticleCard.css";
 
-export default function ArticleCard(article) {
+export default function ArticleCard(props) {
   // ------ added as wanted long cards on a big screen but to fit on small. Flex box alone wasn't looking consistent in sizes ------
   let articleWidth = window.innerWidth;
   if (articleWidth <= 400) {
@@ -19,6 +19,8 @@ export default function ArticleCard(article) {
   } else if (articleHeight > 400) {
     articleHeight = 200;
   }
+
+  const article = props.article;
 
   return (
     <div
