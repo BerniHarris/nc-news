@@ -1,8 +1,8 @@
 import React from "react";
 import moment from "moment";
-import bin from "../pics/bin.svg";
+import bin from "../../pics/bin.svg";
 
-import { deleteArticleComment } from "../utils/api";
+import { deleteArticleComment } from "../../utils/api";
 
 export default function CommentCard(comment) {
   const handleClick = () => {

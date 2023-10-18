@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { SortBy } from "../components/SortBy";
+import { SortBy } from "../components/SortBy/SortBy";
 import * as api from "../utils/api";
-import ArticleCard from "../components/ArticleCard";
+import ArticleCard from "../components/ArticleCard/ArticleCard";
 
 export default function ArticleList() {
   const { topic } = useParams();

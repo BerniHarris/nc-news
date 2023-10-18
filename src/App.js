@@ -4,10 +4,10 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { React } from "react";
 //imported components
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import ArticleList from "./pages/ArticleList";
-import Article from "./components/Article";
-import Navbar from "./components/Navbar";
+import Article from "./components/Article/Article";
+import Navbar from "./components/NavBar/Navbar";
 //imported pages
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound.jsx";

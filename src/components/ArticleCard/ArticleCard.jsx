@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import like from "../pics/like.svg";
-import comment from "../pics/comment.svg";
+import like from "../../pics/like.svg";
+import comment from "../../pics/comment.svg";
 import "./ArticleCard.css";
 
 export default function ArticleCard(props) {

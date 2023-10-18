@@ -1,6 +1,6 @@
 import React from "react";
 import * as FaIcons from "react-icons/fa";
-import Birdhouse from "./birdhouse";
+import Birdhouse from "../../pics/birdhouse";
 
 export const NavbarData = [
   {

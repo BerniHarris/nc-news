@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { postArticleComment } from "../utils/api";
+import { postArticleComment } from "../../utils/api";
 
 export default function PostComment({ setComments, article_id }) {
   const [comment, setComment] = useState("");
@@ -28,7 +27,7 @@ export default function PostComment({ setComments, article_id }) {
           setErr(true);
           alert("Somthing went wrong! Please try again");
           setComments((currComments) => {
-            return currComments.slice(1);
+            currComments.slice(1);
           });
         })
         .then((newResponseComment) => {
@@ -38,6 +37,7 @@ export default function PostComment({ setComments, article_id }) {
         });
     }
   };
+  console.log(err);
   return (
     <div className="form-box">
       <form onSubmit={handleSubmit}>
@@ -58,5 +58,3 @@ export default function PostComment({ setComments, article_id }) {
     </div>
   );
 }
-
-// {username: newComment.author, body: newComment.body}
