@@ -11,7 +11,7 @@ import Navbar from "./components/Navbar";
 //imported pages
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound.jsx";
-import Landing from "./pages/Landing";
+import Landing from "./pages/Landing/Landing";
 import About from "./pages/About";
 
 function App() {
