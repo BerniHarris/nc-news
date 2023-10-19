@@ -37,7 +37,6 @@ export default function PostComment({ setComments, article_id }) {
         });
     }
   };
-  console.log(err);
   return (
     <div className="form-box">
       <form onSubmit={handleSubmit}>

@@ -1,30 +1,29 @@
 import React from "react";
+import { deleteArticleComment } from "../../utils/api";
 import moment from "moment";
 import bin from "../../pics/bin.svg";
 
-import { deleteArticleComment } from "../../utils/api";
+export default function CommentCard(props) {
+  let { author, body, comment_id, created_at, votes } = props;
 
-export default function CommentCard(comment) {
   const handleClick = () => {
-    deleteArticleComment(comment.comment_id).then(() => {
+    deleteArticleComment(comment_id).then(() => {
       alert("Comment deleted!");
     });
   };
-
-  let created = comment.created_at;
 
   return (
     <div>
       <dl className="individual-comment-box">
         <div className="timeandby2">
-          <dt className="card_author">By {comment.author}</dt>
+          <dt className="card_author">By {author}</dt>
           <dt className="article_time">
-            {moment(created).format("MMM Do YYYY")}
+            {moment(created_at).format("MMM Do YYYY")}
           </dt>
         </div>
-        <dt className="comment_body">{comment.body}</dt>
+        <dt className="comment_body">{body}</dt>
         <div className="likeanddelete">
-          <dt>Votes {comment.votes}</dt>
+          <dt>Votes {votes}</dt>
           <img
             src={bin}
             onClick={handleClick}

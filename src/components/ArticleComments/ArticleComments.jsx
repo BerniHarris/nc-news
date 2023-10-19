@@ -1,6 +1,6 @@
-import CommentCard from "../../components/CommentCard/CommentCard";
 import React, { useState, useEffect } from "react";
 import { getCommentsByArticle } from "../../utils/api";
+import CommentCard from "../../components/CommentCard/CommentCard";
 
 export default function ArticleComments(props) {
   const [comments, setComments] = useState([]);

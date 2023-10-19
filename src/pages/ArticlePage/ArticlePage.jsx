@@ -8,7 +8,7 @@ import "./ArticlePage.css";
 
 export default function ArticlePage() {
   const { article_id } = useParams();
-  const [article, setArticle] = useState([]);
+  const [article, setArticle] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [reload, setReload] = useState(true);
 
