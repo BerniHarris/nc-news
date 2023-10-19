@@ -1,5 +1,5 @@
-import like from "../pics/like.svg";
-import dislike from "../pics/dislike_comment.svg";
+import like from "../../pics/like.svg";
+import dislike from "../../pics/dislike_comment.svg";
 
 export default function Voting(props) {
   const change = props.voteChange;

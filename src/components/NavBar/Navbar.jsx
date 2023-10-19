@@ -1,14 +1,14 @@
 /* eslint-disable no-empty-pattern */
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { NavbarData } from "./NavbarData";
+import { IconContext } from "react-icons";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import { Link } from "react-router-dom";
+import avatar from "../../pics/profileicon.png";
+import profileicon from "../../pics/profileicon.png";
+import logo from "../../pics/logo.png";
 import "./Navbar.css";
-import { IconContext } from "react-icons";
-import logo from "../pics/logo.png";
-import profileicon from "../pics/profileicon.png";
-import { NavbarData } from "./NavbarData";
-import avatar from "../pics/profileicon.png";
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);

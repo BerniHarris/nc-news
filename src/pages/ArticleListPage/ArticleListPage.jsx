@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import * as api from "../utils/api";
-import ArticleCard from "../components/ArticleCard";
-import { SortBy } from "../components/SortBy";
+import { SortBy } from "../../components/SortBy/SortBy";
+import * as api from "../../utils/api";
+import ArticleCard from "../../components/ArticleCard/ArticleCard";
 
-export default function ArticleList() {
+export default function ArticleListPage() {
   const { topic } = useParams();
 
   const [articles, setArticles] = useState([]);
@@ -13,8 +13,8 @@ export default function ArticleList() {
   const [order, setOrder] = useState();
 
   useEffect(() => {
-    api.getAllArticles(topic, sort, order).then((res) => {
-      setArticles(res);
+    api.getAllArticles(topic, sort, order).then((data) => {
+      setArticles(data);
       setLoading(false);
     });
   }, [topic, sort, order]);
@@ -35,16 +35,7 @@ export default function ArticleList() {
         {articles.map((article) => {
           return (
             <section key={article.article_id}>
-              <ArticleCard
-                body={article.body}
-                title={article.title}
-                topic={article.topic}
-                author={article.author}
-                created_at={article.created_at}
-                votes={article.votes}
-                comment_count={article.comment_count}
-                article_id={article.article_id}
-              />
+              <ArticleCard article={article} />
             </section>
           );
         })}

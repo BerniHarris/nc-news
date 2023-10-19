@@ -1,0 +1,50 @@
+.card_votes,
+.card_comments {
+  height: 1rem;
+}
+
+.coding-card,
+.football-card,
+.cooking-card {
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+  padding: 1.5rem;
+  height: 200px;
+  box-shadow: 0 0 25px 5px var(--box-shadow-color);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Default styles for larger screens */
+.coding-card,
+.football-card,
+.cooking-card {
+  width: 500px;
+  height: 200px;
+}
+
+/* Media query for screens with a width of 400px or less */
+@media (max-width: 400px) {
+  .coding-card,
+  .football-card,
+  .cooking-card {
+    width: 240px;
+    height: 300px;
+  }
+}
+
+.football-card:hover {
+  transform: scale(1.1);
+  --box-shadow-color: #e1bfae;
+}
+
+.cooking-card:hover {
+  transform: scale(1.1);
+  --box-shadow-color: #bed3d4;
+}
+.coding-card:hover {
+  transform: scale(1.1);
+  --box-shadow-color: #e2d1d4;
+}
