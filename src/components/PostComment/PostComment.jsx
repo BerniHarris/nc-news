@@ -3,7 +3,7 @@ import { postArticleComment } from "../../utils/api";
 
 export default function PostComment({ setComments, article_id }) {
   const [comment, setComment] = useState("");
-  const [err, setErr] = useState(false);
+  const [err, setErr] = useState("");
 
   const handleChange = (event) => {
     setComment(event.target.value);
@@ -24,8 +24,7 @@ export default function PostComment({ setComments, article_id }) {
       setComment("");
       postArticleComment(article_id, newComment)
         .catch((err) => {
-          setErr(true);
-          console.log(err);
+          setErr(err);
           alert("Somthing went wrong! Please try again");
           setComments((currComments) => {
             currComments.slice(1);
@@ -38,6 +37,7 @@ export default function PostComment({ setComments, article_id }) {
         });
     }
   };
+  console.log(err);
   return (
     <div className="form-box">
       <form onSubmit={handleSubmit}>
