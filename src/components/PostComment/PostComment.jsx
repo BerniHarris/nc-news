@@ -25,6 +25,7 @@ export default function PostComment({ setComments, article_id }) {
       postArticleComment(article_id, newComment)
         .catch((err) => {
           setErr(true);
+          console.log(err);
           alert("Somthing went wrong! Please try again");
           setComments((currComments) => {
             currComments.slice(1);
