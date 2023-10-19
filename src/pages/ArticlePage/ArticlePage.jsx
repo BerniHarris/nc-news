@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getArticle, getCommentsByArticle, patchVotes } from "../../utils/api";
-import PostComment from "../PostComment/PostComment";
-import CommentCard from "../CommentCard/CommentCard";
-import Voting from "../Voting/Voting";
+import PostComment from "../../components/PostComment/PostComment";
+import CommentCard from "../../components/CommentCard/CommentCard";
+import Voting from "../../components/Voting/Voting";
 import moment from "moment";
 import comment from "../../pics/comment.svg";
-import "./Article.css";
+import "./ArticlePage.css";
 
 export default function Article() {
   const { article_id } = useParams();

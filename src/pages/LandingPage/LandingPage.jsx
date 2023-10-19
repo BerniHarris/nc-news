@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "./Landing.css";
+import "./LandingPage.css";
 
-export default function Landing() {
+export default function LandingPage() {
   return (
     <div className="background">
       <div className="landing-content">
