@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { getArticle, getCommentsByArticle, patchVotes } from "../../utils/api";
+import { useParams } from "react-router-dom";
+import { getArticle, getCommentsByArticle } from "../../utils/api";
+import Article from "../../components/Article/Article";
 import PostComment from "../../components/PostComment/PostComment";
 import CommentCard from "../../components/CommentCard/CommentCard";
-import Voting from "../../components/Voting/Voting";
-import moment from "moment";
-import comment from "../../pics/comment.svg";
 import "./ArticlePage.css";
 
-export default function Article() {
+export default function ArticlePage() {
   const { article_id } = useParams();
   const [article, setArticle] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [comments, setComments] = useState([]);
   const [reload, setReload] = useState(true);
-  const [votes, setVotes] = useState(0);
-  const [voteChange, setVoteChange] = useState(0);
 
   useEffect(() => {
     if (reload) {
@@ -23,7 +19,6 @@ export default function Article() {
         getArticle(article_id),
         getCommentsByArticle(article_id),
       ]).then(([dataArticle, dataComments]) => {
-        setVotes(dataArticle.votes);
         setArticle(dataArticle);
         setComments(dataComments);
         setIsLoading(false);
@@ -32,61 +27,13 @@ export default function Article() {
     }
   }, [article_id, reload]);
 
-  const upVote = () => {
-    patchVotes(article_id, 1);
-    setVotes(votes + 1);
-    setVoteChange(voteChange + 1);
-  };
-
-  const downVote = () => {
-    patchVotes(article_id, -1);
-    setVotes(votes - 1);
-    setVoteChange(voteChange - 1);
-  };
-
   return (
     <>
       {isLoading ? (
         <h2>loading...</h2>
       ) : (
         <div>
-          <div className="article-box">
-            <section className="article">
-              <div className="card_topic">
-                <Link to={`/topic/${article.topic}`}>
-                  <p className={`article-${article.topic}`}>
-                    {article.topic.toUpperCase()}
-                  </p>
-                </Link>
-              </div>
-              <h2 className="card_title">{article.title.toUpperCase()}</h2>
-              <div className="timeandby">
-                <p className="card_author">By {article.author}</p>
-                <p className="article_time">
-                  {moment(article.created_at).format("MMM Do YYYY")}
-                </p>
-              </div>
-              <p className="article-body">{article.body}</p>
-              <div className="articlebylikecomment">
-                <p className="articleCommentCount">
-                  <img
-                    src={comment}
-                    className="card_comments"
-                    alt="speech bubble icon"
-                  />
-                  {article.comment_count}
-                </p>
-                <Voting
-                  className="vote"
-                  article_id={article_id}
-                  votes={votes}
-                  upVote={upVote}
-                  downVote={downVote}
-                  voteChange={voteChange}
-                />
-              </div>
-            </section>
-          </div>
+          <Article article={article} />
           <PostComment setComments={setComments} article_id={article_id} />
           <div>
             <div>
