@@ -1,336 +1,318 @@
 .App {
-  text-align: center;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 html {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 .content {
-  flex: 1;
+    flex: 1;
 }
 
 .logo {
-  height: 30px;
-  padding-left: 0.6rem;
+    height: 30px;
+    padding-left: 0.6rem;
 }
 
 .profileicon {
-  padding-right: 1rem;
-  align-items: flex-end;
+    padding-right: 1rem;
+    align-items: flex-end;
 }
 
 .footer {
-  font-size: small;
-  width: 100vw;
-  text-align: center;
-  background-color: #515151;
-  color: white;
-  padding-top: 1.5em;
-  padding-bottom: 2.5em;
-  flex-shrink: 0;
-  max-width: 100%;
+    font-size: small;
+    width: 100vw;
+    text-align: center;
+    background-color: #515151;
+    color: white;
+    padding-top: 1.5em;
+    padding-bottom: 2.5em;
+    flex-shrink: 0;
+    max-width: 100%;
 }
 
 .pagefooter {
-  background-color: #515151;
-  color: black;
-  font-size: small;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  width: 100vw;
-  max-width: 100%;
+    background-color: #515151;
+    color: black;
+    font-size: small;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    width: 100vw;
+    max-width: 100%;
 }
 
 .githublogo {
-  height: 1.3rem;
-  background-color: #515151;
-  padding: 0.5rem;
+    height: 1.3rem;
+    background-color: #515151;
+    padding: 0.5rem;
 }
 
 .card_title {
-  font-weight: 800;
-  font-size: large;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  cursor: pointer;
+    font-weight: 800;
+    font-size: large;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
 }
 
 .card_author {
-  font-weight: 700;
-  color: #515151;
+    font-weight: 700;
+    color: #515151;
 }
 
 .card_topic {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .bylikecomment {
-  font-size: small;
-  justify-content: space-evenly;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+    font-size: small;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 .card_votes {
-  margin-right: 0.2rem;
+    margin-right: 0.2rem;
 }
 
 .card_comments {
-  margin-right: 0.2rem;
+    margin-right: 0.2rem;
 }
 /* author and votes inside their own element look into making the card a flex column*/
 
 .cardcontainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .newnews {
-  display: flex;
+    display: flex;
 }
 
 .article-football {
-  background-color: #fe673a;
-  padding: 0.3rem;
-  width: 12rem;
-  font-weight: 500;
+    background-color: #fe673a;
+    padding: 0.3rem;
+    width: 12rem;
+    font-weight: 500;
 }
 
 .article-cooking {
-  background-color: #3e91c1;
-  padding: 0.3rem;
-  width: 12rem;
-  font-weight: 500;
+    background-color: #3e91c1;
+    padding: 0.3rem;
+    width: 12rem;
+    font-weight: 500;
 }
 
 .article-coding {
-  background-color: #f7b0be;
-  padding: 0.3rem;
-  width: 12rem;
-  font-weight: 500;
+    background-color: #f7b0be;
+    padding: 0.3rem;
+    width: 12rem;
+    font-weight: 500;
 }
 
 .individual-comment-box {
-  margin: 1rem 1rem 1rem 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
 }
 
 .article-box {
-  margin: 0.5rem 0.5rem 2.5rem 0.5rem;
-  padding: 2rem;
-  box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0.5rem 2.5rem 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
 }
 
 .create_votes span {
-  align-self: flex-end;
+    align-self: flex-end;
 }
 
 a:link,
 a:visited,
 a:hover,
 a:active {
-  color: #301934;
-  text-decoration: none;
+    color: #301934;
+    text-decoration: none;
 }
 
 @font-face {
-  font-family: "Fredbones";
-  src: url("../src/utils/Fredbones.ttf");
+    font-family: "Fredbones";
+    src: url("../src/utils/Fredbones.ttf");
 }
 @font-face {
-  font-family: "BlackBones";
-  src: url("../src/utils/BlackBones.ttf");
+    font-family: "BlackBones";
+    src: url("../src/utils/BlackBones.ttf");
 }
 h1 {
-  font-size: 60px;
-  color: #301934;
+    font-size: 60px;
+    color: #301934;
 }
 
 h2 {
-  color: #301934;
+    color: #301934;
 }
 .voting {
-  font-size: small;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding-left: 1rem;
-  padding-right: 1rem;
+    font-size: small;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .articlebylikecomment {
-  font-size: small;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  justify-content: flex-end;
-  align-items: center;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .timeandby {
-  font-size: small;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 1rem;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 .article_time {
-  margin-left: 1.5rem;
+    margin-left: 1.5rem;
 }
 .article-body {
-  margin-bottom: 3em;
-  text-align: left;
+    margin-bottom: 3em;
+    text-align: left;
 }
 .form {
-  width: max-content;
+    width: max-content;
 }
 .form-box {
-  margin: 1rem;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-top-style: hidden;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top-style: hidden;
 }
 .form-box textarea {
-  margin: 1rem;
-  border: 2;
-  border-radius: 5px;
-  font-size: 16px;
-  align-items: center;
-  background-color: whitesmoke;
-  text-align: center;
-  padding: 0.2rem;
-  width: 80%;
-  height: 5rem;
+    margin: 1rem;
+    border: 2;
+    border-radius: 5px;
+    font-size: 16px;
+    align-items: center;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 0.2rem;
+    width: 80%;
+    height: 5rem;
 }
 
 .submit {
-  box-shadow: 0px 0px 5px 0px #1d7c81;
-  background-color: #26a2a8;
-  border: 1px solid #26a5b9;
-  display: inline-block;
-  cursor: pointer;
-  color: black;
-  font-family: Arial;
-  font-size: 17px;
-  padding: 5px 25px;
-  text-decoration: none;
-  font-weight: 700;
+    box-shadow: 0px 0px 5px 0px #1d7c81;
+    background-color: #26a2a8;
+    border: 1px solid #26a5b9;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 5px 25px;
+    text-decoration: none;
+    font-weight: 700;
 }
 .submit:hover {
-  background-color: #1d7c81;
+    background-color: #1d7c81;
 }
 .submit:active {
-  position: relative;
-  top: 1px;
+    position: relative;
+    top: 1px;
 }
 
 .postlabel {
-  font-size: large;
-  font-weight: 700;
+    font-size: large;
+    font-weight: 700;
 }
 .individual-comment-box {
-  padding: 3rem;
-  padding-left: 3.5rem;
-  text-align: left;
-  margin-left: 3rem;
+    padding: 3rem;
+    padding-left: 3.5rem;
+    text-align: left;
+    margin-left: 3rem;
 }
 .comment_body {
-  padding-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 .article {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .likeanddelete {
-  flex-direction: column;
-  text-align: right;
-  padding-top: 0.5rem;
+    flex-direction: column;
+    text-align: right;
+    padding-top: 0.5rem;
 }
 
 .timeandby2 {
-  font-size: small;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin-bottom: 1rem;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
 }
 
 .bin {
-  height: 1.5rem;
-  margin: 0.2rem;
-  fill: #869398;
+    height: 1.5rem;
+    margin: 0.2rem;
+    fill: #869398;
 }
 
 .bin:hover {
-  fill: #26a2a8;
-  transform: scale(1.1);
+    fill: #26a2a8;
+    transform: scale(1.1);
 }
 
 button {
-  background-color: transparent;
-  border-color: transparent;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 .up:hover {
-  transform: scale(1.3);
-  fill: #1d7c81;
+    transform: scale(1.3);
+    fill: #1d7c81;
 }
 .down:hover {
-  transform: scale(1.3);
-  color: #fe673a;
+    transform: scale(1.3);
+    color: #fe673a;
 }
 
 .p-likes {
-  margin-block-start: -0.4em;
-  margin-block-end: 0.1em;
-  font-size: small;
-  color: #515151;
+    margin-block-start: -0.4em;
+    margin-block-end: 0.1em;
+    font-size: small;
+    color: #515151;
 }
 
 .articlCcommentCount {
-  font-size: small;
-  color: #515151;
-  margin-block-start: 0.8em;
-}
-
-.about {
-  text-align: left;
-}
-
-.about-box {
-  margin: 4%;
-  padding: 2rem;
-  box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
-}
-
-.inner-about-box {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 60rem;
-  padding-bottom: 6rem;
+    font-size: small;
+    color: #515151;
+    margin-block-start: 0.8em;
 }
 
 .up {
-  height: 1.2rem;
+    height: 1.2rem;
 }
 
 .down {
-  height: 1.2rem;
+    height: 1.2rem;
 }
