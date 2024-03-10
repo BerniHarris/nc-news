@@ -1,7 +1,7 @@
 const axios = require("axios").default;
 
 const api = axios.create({
-  baseURL: "https://berni-nc-news-api.onrender.com/",
+  baseURL: "https://be-nc-news-4vle.onrender.com",
 });
 
 exports.getTopics = (topic, sort, order) => {
